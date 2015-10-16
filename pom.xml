@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/d/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.escidoc.admintool</groupId>
+	<groupId>de.escidoc.admintool.wildfly</groupId>
 	<artifactId>AdminTool</artifactId>
 	<version>1.1.1</version>
 	<packaging>war</packaging>
@@ -15,14 +15,11 @@
 			<version>6.6.2</version>
 			<scope>compile</scope>
 		</dependency>
-        <!--
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
 			<version>${gwt.version}</version>
-			<scope>provided</scope>
 		</dependency>
-    -->
 		<dependency>
 			<groupId>org.vaadin.addons</groupId>
 			<artifactId>pojo-container</artifactId>
@@ -243,7 +240,7 @@
 			<plugin>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>
-				<version>1.0.1</version>
+				<version>1.0.2</version>
 				<executions>
 					<execution>
 						<goals>
@@ -451,6 +448,16 @@
 			<releases>
 				<enabled>false</enabled>
 			</releases>
+		</pluginRepository>
+		<pluginRepository>
+			<id>nexus</id>
+			<url>http://rd.mpdl.mpg.de/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
 
